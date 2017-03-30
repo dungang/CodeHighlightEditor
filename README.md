@@ -2,6 +2,10 @@
 
 修改 开源项目 CodeHighlightEditor http://code.google.com/p/code-syntax-highlight-editor
 
+> demo
+
+![demo](image/demo.png)
+
 >  调整内容
 
 - 给onload事件添加参数 objectId, textareaId
