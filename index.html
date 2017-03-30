@@ -42,38 +42,39 @@ p .keywords { color:#800; }
 	<div>
     	
         <ul class="buttons">
-        <li><span>Languages : <span></li>
+        <li><span>Languages : </span></li>
         <li>
-    	<input id="btnASP" type="radio" name="language" value="asp" disabled="disabled"/></li></li><label for="btnASP">ASP</label>
-        </li></li>
-        <input id="btnASPX" type="radio" name="language" value="aspx" disabled="disabled"/></li></li><label for="btnASPX">ASP.Net</label>
-        </li></li>
-        <input id="btnPHP" type="radio" name="language" value="php" disabled="disabled"/></li></li><label for="btnPHP">PHP</label>
-        </li></li>
-        <input id="btnJSP" type="radio" name="language" value="jsp" disabled="disabled"/></li></li><label for="btnJSP">JSP</label>
-        </li></li>
-        <input id="btnJAVA" type="radio" name="language" value="java" disabled="disabled"/></li></li><label for="btnJAVA">Java</label>
-        </li></li>
-        <input id="btnCS" type="radio" name="language" value="csharp" disabled="disabled"/></li></li><label for="btnCS">C#</label>
-        </li></li>
-        <input id="btnCPP" type="radio" name="language" value="cpp" disabled="disabled"/></li></li><label for="btnCPP">C++</label>
-        </li></li>
-        <input id="btnJS" type="radio" name="language" value="javascript" disabled="disabled" checked="checked" /></li></li><label for="btnJS">JavaScript</label>
-        </li></li>
-        <input id="btnSQL" type="radio" name="language" value="sql" disabled="disabled"/></li></li><label for="btnSQL">SQL</label>
-        </li></li>
-        <input id="btnXML" type="radio" name="language" value="xml" disabled="disabled"/></li></li><label for="btnXML">XML</label>
-        </li></li>
-        <input id="btnCSS" type="radio" name="language" value="css" disabled="disabled"/></li></li><label for="btnCSS">CSS</label>
-        </li></li>
-        <input id="btnHTML" type="radio" name="language" value="html" disabled="disabled"/></li></li><label for="btnHTML">HTML</label>
+    	<input id="btnASP" type="radio" name="language" value="asp" checked /></li><li><label for="btnASP">ASP</label>
+        </li><li>
+        <input id="btnASPX" type="radio" name="language" value="aspx" /></li><li><label for="btnASPX">ASP.Net</label>
+        </li><li>
+        <input id="btnPHP" type="radio" name="language" value="php" /></li><li><label for="btnPHP">PHP</label>
+        </li><li>
+        <input id="btnJSP" type="radio" name="language" value="jsp" /></li><li><label for="btnJSP">JSP</label>
+        </li><li>
+        <input id="btnJAVA" type="radio" name="language" value="java" /></li><li><label for="btnJAVA">Java</label>
+        </li><li>
+        <input id="btnCS" type="radio" name="language" value="csharp" /></li><li><label for="btnCS">C#</label>
+        </li><li>
+        <input id="btnCPP" type="radio" name="language" value="cpp" /></li><li><label for="btnCPP">C++</label>
+        </li><li>
+        <input id="btnJS" type="radio" name="language" value="javascript"/></li><li><label for="btnJS">JavaScript</label>
+        </li><li>
+        <input id="btnSQL" type="radio" name="language" value="sql" /></li><li><label for="btnSQL">SQL</label>
+        </li><li>
+        <input id="btnXML" type="radio" name="language" value="xml" /></li><li><label for="btnXML">XML</label>
+        </li><li>
+        <input id="btnCSS" type="radio" name="language" value="css" /></li><li><label for="btnCSS">CSS</label>
+        </li><li>
+        <input id="btnHTML" type="radio" name="language" value="html" /></li><li><label for="btnHTML">HTML</label>
         </li>
         </ul>
     </div>
     <div style="clear:both"></div>
+
+    <textarea id="editor-container"></textarea>
 	<div id="flash-loader">
     </div>
-    
     <div>
     <h2 style="font-size:20px">Using the editor</h2>
     <hr />
@@ -122,24 +123,24 @@ p .keywords { color:#800; }
         </li>
         <li><strong>setReadOnly(readOnly:Boolean)</strong>
         	<p>Enable / Disable readOnly mode of the editor.
-            <button type="button" onclick="document.getElementById('ctlFlash').setReadOnly(true)" disabled="disabled">setReadOnly(true)</button>
-            <button type="button" onclick="document.getElementById('ctlFlash').setReadOnly(false)" disabled="disabled">setReadOnly(false)</button>
+            <button type="button" onclick="document.getElementById('ctlFlash').setReadOnly(true)" >setReadOnly(true)</button>
+            <button type="button" onclick="document.getElementById('ctlFlash').setReadOnly(false)" >setReadOnly(false)</button>
             </p>
         </li>
         <li><strong>setText(content:String)</strong>
         	<p>Set the content of the editor.
-            <button type="button" onclick="document.getElementById('ctlFlash').setText('')" disabled="disabled">clear the content</button>
+            <button type="button" onclick="document.getElementById('ctlFlash').setText('')" >clear the content</button>
             </p>
         </li>
         <li><strong>insertText(content:String)</strong>
         	<p>Replace the current selected text in the editor.
-            <button type="button" onclick="document.getElementById('ctlFlash').insertText('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')" disabled="disabled">insertText('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')</button>
+            <button type="button" onclick="document.getElementById('ctlFlash').insertText('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')" >insertText('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX')</button>
             <br />
             NOTE : this method will do nothing if the editor is in readOnly mode.</p>
         </li>
         <li><strong>getText(content:String)</strong>
         	<p>Get the content of the editor. Usually this method is used to gather the content and then submit the content to server in your preferred way.
-            <button type="button" onclick="alert(document.getElementById('ctlFlash').getText())" disabled="disabled">getText()</button>
+            <button type="button" onclick="alert(document.getElementById('ctlFlash').getText())" >getText()</button>
             </p>
         </li>
     </ul>
@@ -149,7 +150,7 @@ p .keywords { color:#800; }
 
 
 
-<textarea id="aspx" style="display:none">&lt;%@ Page Title="&lt;%$ Resources: TitleText %&gt;" Language="C#" ContentType="text/html" ResponseEncoding="utf-8" %&gt;
+<div id="aspx" style="display:none">&lt;%@ Page Title="&lt;%$ Resources: TitleText %&gt;" Language="C#" ContentType="text/html" ResponseEncoding="utf-8" %&gt;
 &lt;%@ Import Namespace="System.Data" %&gt;
 
 &lt;script language="C#" runat="server"&gt;
@@ -206,8 +207,8 @@ protected override void OnLoad(EventArgs e)
 	&lt;!-- Client side comments --&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</textarea>
-<textarea id="asp" style="display:none">&lt;%@ CodePage=65001 Language="VBScript"%&gt;
+</div>
+<div id="asp" style="display:none">&lt;%@ CodePage=65001 Language="VBScript"%&gt;
 &lt;% Option Explicit %&gt;
 &lt;!--#include file="_db.asp"--&gt;
 &lt;html&gt;
@@ -271,9 +272,9 @@ protected override void OnLoad(EventArgs e)
         &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/form&gt;
-</textarea>
+</div>
 
-<textarea id="php" style="display:none">&lt;?php
+<div id="php" style="display:none">&lt;?php
 // PHP_VERSION_ID is available as of PHP 5.2.7, if our 
 // version is lower than that, then emulate it
 if (PHP_VERSION_ID &lt; 50207) {
@@ -300,18 +301,18 @@ if (PHP_VERSION_ID &lt; 50207) {
 &lt;/head&gt;
 &lt;body &gt;&lt;?=$version[0]?&gt;&lt;/pre&gt;&lt;/body&gt;
 &lt;/html&gt;
-</textarea>
+</div>
 
-<textarea id="sql" style="display:none">insert into table1(field1,field2) values(value1,value2)
+<div id="sql" style="display:none">insert into table1(field1,field2) values(value1,value2)
 
 delete from table1 where Time between '2010-01-01' AND GETDATE()
 
 update table1 set field1=value1 where Time between '2010-01-01' AND GETDATE()
 
 select * from table1 where field1 like '%value1%' -- comments
-</textarea>
+</div>
 
-<textarea id="csharp" style="display:none">// Hello3.cs
+<div id="csharp" style="display:none">// Hello3.cs
 // arguments: A B C D
 using System;
 
@@ -329,9 +330,9 @@ public class Hello3
       }
    }
 }
-</textarea>
+</div>
 
-<textarea id="javascript" style="display:none">// initialize with parameters
+<div id="javascript" style="display:none">// initialize with parameters
 var flashvars = {
 	// indicate the parser, aspx / csharp / javascript / css / vbscript / html / xml / php / phpcode
 	parser: "javascript",
@@ -358,9 +359,9 @@ var attributes = { id: "ctlFlash", name: "ctlFlash" };
 
 // embed the flash with size, more information can be found at: http://code.google.com/p/swfobject/wiki/documentation
 swfobject.embedSWF("./bin-release/CodeHighlightEditor.swf?_=" + (new Date()).getTime(), "flash-loader", "100%", "400", "10.0.0", null, flashvars, params, attributes);
-</textarea>
+</div>
 
-<textarea id="java" style="display:none">package hello;
+<div id="java" style="display:none">package hello;
 
 import java.io.* ;
 
@@ -392,9 +393,9 @@ public class Hello {
         //System.out.println( "bye bye... :-D" ) ; // see you soon
     }
 }
-</textarea>
+</div>
 
-<textarea id="jsp" style="display:none">&lt;%@ page isThreadSafe="false" autoFlush="true"%&gt;
+<div id="jsp" style="display:none">&lt;%@ page isThreadSafe="false" autoFlush="true"%&gt;
 &lt;%@ page import="java.io.*,java.util.*" %&gt;
 &lt;jsp:useBean id="fop" scope="page" class="xsl.FOPBean" /&gt;
 &lt;jsp:setProperty name="fop" property="*"/&gt;
@@ -449,9 +450,9 @@ public class Hello {
 
         &lt;/body&gt;
 &lt;/html&gt;
-</textarea>
+</div>
 
-<textarea id="cpp" style="display:none">
+<div id="cpp" style="display:none">
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -460,9 +461,9 @@ int main ()
   cout &lt;&lt; " \"Hello World\"! ";     // prints Hello World!
   cout &lt;&lt; "I'm a C++ program" &lt;&lt; '\''; // prints I'm a C++ program
   return 0;
-}</textarea>
+}</div>
 
-<textarea id="xml" style="display:none">&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+<div id="xml" style="display:none">&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
 &lt;!DOCTYPE scenario SYSTEM "sipp.dtd"&gt;
 
 &lt;scenario name="registration and simple IMS session setup, client side"&gt;
@@ -492,9 +493,9 @@ int main ()
 	&lt;CallLengthRepartition value="10"/&gt;
 		
 &lt;/scenario&gt;
-</textarea>
+</div>
 
-<textarea id="css" style="display:none">h1 { color: white; background-color: orange !important; }
+<div id="css" style="display:none">h1 { color: white; background-color: orange !important; }
 h2 { color: white; background-color: green !important; }
 body
 {
@@ -510,9 +511,9 @@ p
 	font-family:"Times New Roman";
 	font-size:20px;
 }
-</textarea>
+</div>
 
-<textarea id="html" style="display:none">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+<div id="html" style="display:none">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
 &lt;head&gt;
 &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
@@ -541,88 +542,32 @@ ul li
     &lt;/table&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</textarea>
+</div>
 <br />
 
-<div id="flashContent" style="width:100%">
-</div>   
 
+<script type="text/javascript" src="bin-release/code-editor.js"></script>
+<script language="javascript" type="text/javascript">
+    var editor = CodeEditor.create({
+        swfTextAreaId:'editor-container',
+        swfContainerId:'flash-loader',
+        swfEditorObject: './bin-release/CodeHighlightEditor.swf'
+    });
+    CodeEditor.onAfterLoaded = function () {
+        editor.setContent(document.getElementById('asp').innerText);
+        editor.changeParser('asp');
+    };
 
-<script type="text/javascript">
-var Abc = function(){
-    this.onload = function(){
-        alert('eee');
+    var inputs = document.getElementsByName('language');
+    for(var i=0; i<inputs.length; i++) {
+        if(inputs[i].type == 'radio') {
+            inputs[i].onclick = function(){
+                editor.setContent(document.getElementById(this.value).innerText);
+                editor.changeParser(this.value);
+            }
+        }
     }
-
-}
-
-var a = new Abc();
-a.onload();
-function onEditorLoaded(a,b,c){
-    alert('onEditorLoaded');
-	// call setText to load content into editor
-	document.getElementById('ctlFlash').setText( document.getElementById('txtASPX').value );
-	
-	// enable the buttons
-	var buttons = document.getElementsByTagName('input');
-	for( var i = 0; i < buttons.length; i++){
-		if( buttons[i].type == 'button' )
-			buttons[i].disabled = false;
-	}
-}
-
-function onChange(a,b,c) {
-    alert('onchange');
-}
-
-
-// initialize with parameters
-var flashvars = {
-    textareaId:'abdc',
-	// indicate the parser, aspx / csharp / javascript / css / vbscript / html / xml / php / phpcode
-	parser: "aspx",
-	
-	// set the editor to read-only mode
-	readOnly: false,	
-
-	// the editor detects client installed fonts and use preferred fonts if installed.
-	// NOTE: the charactor '|' is required at the begin and end of the list
-	preferredFonts : "|Fixedsys|Fixedsys Excelsior 3.01|Fixedsys Excelsior 3.00|Courier New|Courier|",
-
-	// indicate the callback function so that we can load the content into editor once it is initialized.
-	onload : "onEditorLoaded",
-    onchange : "onchange"			
-};
-
-// flash player parameters, you can find more information at: http://code.google.com/p/swfobject/wiki/documentation
-var params = { menu: "false", /* wmode : "transparent", */allowscriptaccess : "always" };
-
-// define the id of the flash control, we need the id in javascript interaction 
-var attributes = { id: "ctlFlash", name: "ctlFlash" };
-
-// embed the flash with size, more information can be found at: http://code.google.com/p/swfobject/wiki/documentation
-swfobject.embedSWF("./bin-release/CodeHighlightEditor.swf?_=" + (new Date()).getTime(), "flash-loader", "100%", "420", "10.0.0", null, flashvars, params, attributes);
-
-
-
-
-
-
-
-
-
-
-
-if( window.location.protocol != 'http:' ) {
-	alert( 'Please open the demo page via http protocol!' );
-}
-
-function loadContent( lang, textarea){
-	document.getElementById('ctlFlash').setParser(lang);
-	document.getElementById('ctlFlash').setText( document.getElementById(textarea).value );
-}
 </script>
-
 
 </body>
 </html>

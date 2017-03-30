@@ -317,10 +317,10 @@ package
 				clearTimeout(m_SaveHistoryTimerID);
 			m_SaveHistoryTimerID = setTimeout( this.saveHistory, 500);
 			
+			
 			var onchange : * = this.loaderInfo.parameters["onchange"];
 			var textareaId : * = this.loaderInfo.parameters["textareaId"];
-			ExternalInterface.call( onchange ,textareaId,this.getText());
-			
+			ExternalInterface.call( onchange ,textareaId,this.text);
 			
 		}
 		
